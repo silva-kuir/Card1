@@ -121,8 +121,11 @@ public class ContactManagerApp {
 
         org.example.Contact contact = new org.example.Contact(name, phone, email);
         contacts.add(contact);
+
+        // -----------Display the name in the contact list-----------
         contactListModel.addElement(name);
 
+        // ----------Reset fields and return to contact list view--------
         nameField.setText("");
         phoneField.setText("");
         emailField.setText("");
@@ -130,6 +133,7 @@ public class ContactManagerApp {
         cardLayout.show(cardPanel, "ContactList");
     }
 
+    // ----------Logic to display selected contact's details-----------
     private void showContactDetails() {
         int selectedIndex = contactList.getSelectedIndex();
         if (selectedIndex == -1) {
@@ -137,18 +141,21 @@ public class ContactManagerApp {
             return;
         }
 
+        // -----Get the selected contact and display their details-----------
         org.example.Contact contact = contacts.get(selectedIndex);
         detailsLabel.setText("Name: " + contact.name() +  " "+  "Phone: " +   contact.phone()    + " "+   ("Email: "   + contact.email() ));
         cardLayout.show(cardPanel, "ContactDetails");
     }
 
     public static void main(String[] args) {
+        //----Instruction to run the application-------
         SwingUtilities.invokeLater(ContactManagerApp::new);
     }
 
 }
 
 
+// --------A simple record to store contact information (name, phone, and email)------------
 record Contact(String name, String phone, String email){
 
 

@@ -19,8 +19,12 @@ public class ContactManagerApp {
 
     //---------Initializing the constructor for the ContactManagerApp------------
     public ContactManagerApp() {
-        frame = new JFrame("Contact Manager");
+
+        //------Creating main frame--------------
+        frame = new JFrame("Card Layout");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //-------Setting the size of the frame----------
         frame.setSize(600, 600);
 
         cardLayout = new CardLayout();
@@ -33,7 +37,10 @@ public class ContactManagerApp {
         createContactDetailsView();
         createContactFormView();
 
+        //-----Adding cardPanel to the frame-----------
         frame.add(cardPanel);
+
+        //-----Setting visibility parameter of the frame--------
         frame.setVisible(true);
     }
 

@@ -48,10 +48,17 @@ public class ContactManagerApp {
         frame.setVisible(true);
     }
 
+    // -------------Creating the contact list view--------------
+
     private void createContactListView() {
+
+        //----------Creating a panel to contain contactList -----------------------
         JPanel panel = new JPanel(new BorderLayout());
+
+        //-------------positioning contactList to the center of the frame-----------
         panel.add(new JScrollPane(contactList), BorderLayout.CENTER);
 
+        // ----------Button panel with "Add New Contact" and "View Details" buttons---------------
         JPanel buttonPanel = new JPanel();
         JButton addButton = new JButton("Add New Contact");
         JButton viewButton = new JButton("View Details");

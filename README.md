@@ -1,3 +1,5 @@
+:CARDLAYOUT CODE:
+
 1. Class and Structure
 ContactManagerApp: This is the main class that manages the user interface (UI) and functionality for the contact manager.
 Contact: A record is defined to store contact details like name, phone number, and email. This is a simple container that provides immutable data for each contact.

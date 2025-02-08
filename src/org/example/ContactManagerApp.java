@@ -4,7 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+//-------Creating the contact manager application--------
 public class ContactManagerApp {
+
+    //------Instances of the application--------------
     private final JFrame frame;
     private final JPanel cardPanel;
     private final CardLayout cardLayout;
@@ -14,10 +17,11 @@ public class ContactManagerApp {
     private JTextField nameField, phoneField, emailField;
     private JLabel detailsLabel;
 
+    //---------Initializing the constructor for the ContactManagerApp------------
     public ContactManagerApp() {
         frame = new JFrame("Contact Manager");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(600, 600);
 
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);

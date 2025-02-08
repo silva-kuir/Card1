@@ -28,11 +28,15 @@ public class ContactManagerApp {
         frame.setSize(600, 600);
 
         cardLayout = new CardLayout();
+
+        //----------Creating the main panel of the card------------
         cardPanel = new JPanel(cardLayout);
 
+        //---------List model for contact names-------------
         contactListModel = new DefaultListModel<>();
         contactList = new JList<>(contactListModel);
 
+        //---------Creating the views-------------
         createContactListView();
         createContactDetailsView();
         createContactFormView();

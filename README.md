@@ -1,4 +1,4 @@
-:CARDLAYOUT CODE:
+LOGIC EXPLANATION OF THE CARDLAYOUT CODE:
 
 1. Class and Structure
 ContactManagerApp: This is the main class that manages the user interface (UI) and functionality for the contact manager.
